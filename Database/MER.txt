@@ -1,0 +1,11 @@
+Banco de dados sem relacionamento para o controle de emprestimos em uma livraria.
+Emprestimo 
+    -> ID (Inteiro, não nulo, função de auto incremento, chave primaria)
+    -> Título (100 Caracteres, não nulo)
+    -> Autor (20 Caracteres, não nulo)
+    -> Data emprestimos (Data, não nulo)
+    -> Data prevista (Data, nulo)
+    -> Data devolução (Data, nulo)
+    -> Valor do livro (Decimal [10, 2], não nulo)
+    -> Cobrança (Campo de calculo, Decimal [10, 2], não nulo)
+    -> Imagem (Texto, não nulo)
