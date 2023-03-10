@@ -1,0 +1,485 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    animation-name: cores;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    color: rgb(0, 0, 56);
+    font-family: 'Raleway', sans-serif;
+}
+@keyframes cores {
+    0% { background-color: #aa76ff;} 
+    40% {background-color: rgb(107, 127, 255);}
+    80% {background-color: #9191ff;}
+    100% {background-color: #aa76ff;}
+    
+}
+
+header{
+    width: 100%;
+    height: 10%;
+    background-color: rgba(16, 0, 86, 0.815);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 0.7s;
+    animation-name: aparecer;
+    animation-duration: 2s;
+}
+@keyframes aparecer {
+    from {opacity: 1;}
+    to {opacity: 0;}
+    
+}
+
+header:hover{
+    background-color: rgba(25, 0, 134, 0.814);
+    box-shadow: 5px 5px 15px rgba(3, 0, 12, 0.321);
+}
+
+.error{
+    position: absolute;
+    color: rgb(255, 137, 137);
+    font-weight: bold;
+    font-size: 0.8vw;
+    margin-left: 4%;
+    animation-name: aparecer;
+    animation-duration: 0.5s;
+}
+
+@keyframes aparecer {
+    from {opacity: 1;}
+    to {opacity: 0;}
+    
+}
+
+.formulario{
+    margin-top: 2%;
+    margin-left: 1.5%;
+    display: flex;
+    align-items: center;
+    width: 10%;
+    height: 100%;
+}
+#icon{
+    transition-duration: 0.5s;
+}
+
+#icon:hover{
+    width: 33%;
+}
+
+
+#cmenu{
+    width: 100%;
+    height: 100%;
+}
+
+#menudrop{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.5);
+    position: absolute;
+    top: 0px;
+    left: -100%; /*a div do menudrop virá da esquerda*/
+    color: white;
+}
+
+#menu{
+    display: none; /* deixa invisivel o checkbox*/
+}
+
+.back{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(3, 0, 48, 0.195);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back1{
+    width: 35%;
+    height: 80%;
+    border-radius: 1%;
+    box-shadow: 10px 10px 10px rgba(2, 43, 101, 0.252);
+    background: linear-gradient(rgb(129, 116, 255), rgb(143, 195, 255));
+}
+
+
+form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+::placeholder{
+    color: rgb(207, 228, 255);
+}
+
+.titulo_autor, .datas, .valors, .imgs, .buttons{
+    width: 80%;
+    height: 7%;
+    margin: 1%;
+    display: flex;
+    align-items: center;
+}
+
+#titulo, #autor{
+    transition: width 0.4s ease-in-out;
+    border-radius: 1%;
+    border: none;
+    background-color: rgba(102, 51, 153, 0);
+    border-bottom: 0.35vh solid rgb(255, 255, 255);
+    color: white;
+    font-size: 1vw;
+    outline:none;
+
+}
+#titulo{
+    width: 60%;
+    height: 80%;
+    background-image: url(../Assets/icon_titulo.png);
+    background-position: 0.2vw 0.5vh;
+    background-size: 1.5vw;
+    background-repeat: no-repeat;
+    padding-left: 7%;  
+}
+
+#autor{
+    width: 50%;
+    height: 80%;
+    background-image: url(../Assets/icon_user.png);
+    background-position: 0.2vw 0.5vh;
+    background-size: 1.3vw;
+    background-repeat: no-repeat;
+    padding-left: 7%;  
+}
+
+
+
+#titulo:focus, #autor:focus{
+    width: 90%;
+    border-bottom: 0.4vh solid rgb(221, 222, 255);
+}
+
+.datas{
+    display: flex;
+    justify-content: end;
+}
+
+#data_emprestimo, #data_prevista, #data_devolucao{
+    width: 30%;
+    height: 60%;
+    outline:none;
+    border: none;
+    padding-left: 2%;
+    background-color: #00000000;
+    font-size: 0.9vw;
+    color: rgb(79, 84, 255);
+    border-bottom: 0.4vh solid rgb(79, 84, 255);
+    border-radius: 5%;
+    font-weight: bold;
+}
+
+::-webkit-calendar-picker-indicator{
+    background-image: url(../Assets/icon_calendar.png);
+    background-size: 1vw;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+::-webkit-calendar-picker-indicator:hover{
+    background-size: 0.9vw;
+}
+
+#data_empestimo:invalid{
+    background-color: rgb(255, 183, 183);
+}
+
+#data_emprestimo:valid{
+    border-bottom: 0.4vh solid rgb(49, 255, 56);
+    color: rgb(72, 255, 62);
+}
+
+#valor{
+    width: 30%;
+    height: 80%;
+    background-image: url(../Assets/icon_moeda.png);
+    background-position: 0.2vw 0.5vh;
+    background-size: 1.3vw;
+    background-repeat: no-repeat;
+    padding-left: 7%; 
+    transition: width 0.4s ease-in-out;
+    border-radius: 1%;
+    border: none;
+    background-color: rgba(102, 51, 153, 0);
+    border-bottom: 0.35vh solid rgb(255, 255, 255);
+    color: white;
+    font-size: 1vw;
+    outline:none;
+}
+
+#valor:focus{
+    width: 25%;
+    border-bottom: 0.4vh solid rgb(221, 222, 255);
+}
+
+#valor::-webkit-outer-spin-button,
+#valor::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#image{
+    width: 60%;
+    height: 80%;
+    background-image: url(../Assets/icon_image.png);
+    background-position: 0.2vw 0.5vh;
+    background-size: 1.3vw;
+    background-repeat: no-repeat;
+    padding-left: 7%; 
+    transition: width 0.4s ease-in-out;
+    border-radius: 1%;
+    border: none;
+    background-color: rgba(102, 51, 153, 0);
+    border-bottom: 0.35vh solid rgb(255, 255, 255);
+    color: white;
+    font-size: 1vw;
+    outline:none;
+}
+#image:focus{
+    width: 90%;
+    border-bottom: 0.4vh solid rgb(221, 222, 255);
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#button{
+    width: 25%;
+    height: 65%;
+    border: none;
+    outline:none;
+    cursor: pointer;
+    border-radius: 0.3vw;
+    font-size: 1vw;
+    color: white;
+    background-color: #4d4dcd;
+    box-shadow: 5px 5px 5px rgba(14, 26, 119, 0.166);
+    transition-duration: 0.5s;
+}
+#button:hover{
+    width: 25%;
+    height: 65%;
+    background-color: #5c5cd6;
+    box-shadow: 4px 4px 4px rgba(14, 26, 119, 0.166);
+
+}
+
+#menu:checked ~ #menudrop { /*aqui mudará quando clicar*/
+   left: 0%;
+   animation-name: tran;
+   animation-duration: 1s;
+   overflow: hidden;
+}
+@keyframes tran {
+    from {opacity: 0;}
+    to {opacity: 1;}
+    
+}
+
+main{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.workspace{
+    width: 90%;
+    height: 90%;
+    background-color: rgba(86, 54, 167, 0.696);
+    border-radius: 1%;
+    transition-duration: 1s;
+    padding: 2%;
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    animation-name: aparecer;
+    animation-duration: 2s;
+}
+
+@keyframes aparecer {
+    from {opacity: 0;}
+    to {opacity: 1;}
+    
+}
+
+
+.workspace::-webkit-scrollbar{
+    width: 0vw;
+    height: auto;
+}
+
+
+.workspace:hover{
+    background-color: rgba(88, 48, 188, 0.696);
+    box-shadow: 8px 8px 8px rgba(14, 26, 119, 0.166);
+
+}
+
+
+.modelo{
+    width: 30%;
+    height: 50%;
+    background-color: rgb(77, 45, 24);
+    border-radius: 2%;
+    box-shadow: 8px 8px 8px rgba(57, 8, 126, 0.297);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 3.3%;
+    margin-bottom: 4%;
+    transition-duration: 0.3s;
+}
+
+.modelo:hover{
+    width: 30.5%;
+    height: 50.5%;
+    margin-right: 2.8%;
+    margin-bottom: 2%;
+}
+
+
+.card{
+    display: none;
+}
+
+
+
+.asset, .info{
+    width: 40%;
+    height: 85%;
+    background-color: rgb(243, 243, 207);
+}
+
+.asset{
+    margin-right: 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1vw;
+    color: black;
+}
+.marcadorpag{
+    width: 30%;
+    height: 15%;
+    background-color: rgb(194, 0, 0);
+    background-image: url(../Assets/icon_close.png);
+    background-repeat: no-repeat;
+    background-size: 80% 90%;
+    background-position: center;
+    margin-top: -24%;
+    border-bottom: 0.4vh solid rgb(243, 243, 207);
+    margin-bottom: 1%;
+    cursor: pointer;
+    transition-duration: 0.07s;
+}
+
+.marcadorpag:hover{
+    background-color: rgb(182, 0, 0);
+    background-size: 83% 93%;
+
+}
+
+.foto{
+    width: 85%;
+    height: 68%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.titulo{
+    width: 85%;
+    height: 28%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    overflow-y: auto;
+}
+
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.autor, .data_emprestimo, .data_prevista, .data_devolucao{
+    width: 90%;
+    height: 17%;
+    margin-bottom: 1%;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    font-size: 0.8vw;
+}
+
+.ee1img{
+    content:url('../Assets/icon_user.png');
+    width: 15%;
+}
+
+.ee2img, .ee3img, .ee4img{
+    content:url('../Assets/icon_calendar.png');
+    width: 13%;
+}
+
+.eee1img{
+    content: url(../Assets/icon_moeda.png);
+    width: 15%;
+}
+
+.campocobranca{
+    width: 90%;
+    height: 23%;
+    font-size: 0.8vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.cobranca{
+    width: 100%;
+    height: 50%;
+    background-color: rgb(227, 226, 198);
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+    font-weight: ita;
+}
+
+
+
+
+
+
+

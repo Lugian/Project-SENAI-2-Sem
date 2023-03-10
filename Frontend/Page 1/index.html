@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../Assets/icon_page.png" type="image/x-icon">
+    <title>Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+    </style>
+    <header>
+        <h1 style="font-size: 1.8vw;">Gerencie os livros de emprestimos</h1>
+        <div class="formulario">
+            <label for="menu" id="cmenu">
+                <img src="../Assets/icon_addbook.png" id="icon" alt="icone menu" width="30%" style=" cursor: pointer;">
+            </label>   
+        
+            <input type="checkbox" name="" id="menu">
+        
+            <div id="menudrop">
+        
+            <!--fecha o menudrop-->
+            <div class="back">
+                <div class="back1">
+                    <label for="menu">
+                        <img src="../Assets/icon_close.png" alt="icone close" width="4%" height="4%" style="margin-top: 1%; margin-left: 95%;cursor: pointer;">
+                    </label>
+                    <p class="error card">Esse é um erro</p>
+                    <form id="cadastro">
+                        <h1 style="font-size: 1.5vw; margin-bottom: 5%;">Preencha os campos abaixo</h1>
+                        <div class="titulo_autor">
+                            <input type="text" name="titulo" id="titulo" required  placeholder="Título do livro">
+                        </div>
+                        <div class="titulo_autor">
+                            <input type="text" name="autor" id="autor" required  placeholder="Autor do emprestimo">
+                        </div>
+                        <div class="datas">
+                            <p style="font-size: 1vw; margin-right: 5%;">Data do emprestimo do livro</p>
+                            <input type="date" name="data_emprestimo" id="data_emprestimo" required  min="2010-01-01" max="2024-01-01">
+                        </div>
+                        <div class="datas">
+                            <p style="font-size: 1vw; margin-right: 5%;">Data prevista para devolução</p>
+                            <input type="date" name="data_prevista" id="data_prevista" min="2010-01-01" max="2024-01-01">
+                        </div>
+                        <div class="datas">
+                            <p style="font-size: 1vw; margin-right: 5%;">Data da devolução</p>
+                            <input type="date" name="data_devolucao" id="data_devolucao" min="2010-01-01" max="2024-01-01">
+                        </div>
+                        <div class="valors">
+                            <input type="number" name="valor" id="valor" placeholder="Valor do livro">
+                        </div>
+                        <div class="imgs">
+                            <input type="text" name="image" id="image" required placeholder="URL imagem">
+                        </div>
+                        <div class="buttons">
+                            <button id="button">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+            
+        </div>
+
+    </header>
+    <main>
+        <div class="workspace">
+            <div class="modelo card">
+                <div class="asset">
+                    <div class="marcadorpag"></div>
+                    <div class="foto"></div>
+                    <div class="titulo">
+                        <p id="ti">Harry</p>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="autor">
+                        <img alt="icone do usuário" class="ee1img">
+                        <p id="au" style="margin-left: 4%;"></p>
+                    </div>
+                    <div class="data_emprestimo">
+                        <img alt="icon calendario" class="ee2img">
+                        <p id="de" style="margin-left: 4%;"></p>
+                    </div>
+                    <div class="data_prevista">
+                        <img alt="icon calendario" class="ee3img">
+                        <p id="dp" style="margin-left: 4%;"></p>
+                    </div>
+                    <div class="data_devolucao">
+                        <img alt="icon calendario" class="ee4img">
+                        <p id="dd" style="margin-left: 4%;"></p>
+                    </div>
+                    <div class="campocobranca">
+                        <i>Cobrança</i>
+                        <div class="cobranca">
+                            <img alt="icon de moeda" class="eee1img">
+                            <p id="cobr" style="margin-left: 4%;">null</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+        
+    </main>
+    
+      
+</body>
+<script src="script.js"></script>
+</html>
