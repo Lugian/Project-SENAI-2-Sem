@@ -31,5 +31,5 @@ Na parte do usuário (desenvolvimento do Front) ele poderá adicionar e excluir 
 Finalizando, há verificações para os campos de registros do nosso formulário e um campo calculavel de cobrança
 <br></br>
 ## Mapa de pastas
-<img src="https://github.com/Lugian/Project-SENAI-2-Sem/blob/main/pastas_miro.jpg" width="500px">
+<img src="https://github.com/Lugian/Project-SENAI-2-Sem/blob/main/mape.png" width="450px">
 
